@@ -1,0 +1,9 @@
+2021-05-25 20:10:25.002609269000 [6931(ThreadId 13)] ERROR APP - user error (no stacktrace found.)
+2021-05-25 20:10:25.021831157000 [6931(ThreadId 13)] ERROR APP - user error (no stacktrace found.)
+2021-05-25 20:10:25.229276910000 [6931(ThreadId 13)] ERROR APP - user error (ExecResult not found.)
+2021-05-25 20:36:42.911993478000 [10659(ThreadId 13)] ERROR APP - start debugging failed. user error (ExecResult not found.) : Left "user error (ExecResult not found.)"
+2021-05-25 20:40:45.246962291000 [11063(ThreadId 13)] ERROR APP - [CRITICAL] can not get the initial ghci prompt.
+2021-05-25 20:41:20.638918914000 [11276(ThreadId 13)] ERROR APP - start debugging failed. user error (ExecResult not found.) : Left "user error (ExecResult not found.)"
+2021-05-26 18:29:56.177145053000 [7353(ThreadId 13)] ERROR APP - start debugging failed. user error (ExecResult not found.) : Left "user error (ExecResult not found.)"
+2021-05-26 19:53:41.505089769000 [14990(ThreadId 13)] ERROR APP - start debugging failed. user error (ExecResult not found.) : Left "user error (ExecResult not found.)"
+2021-05-26 19:54:11.251339867000 [15183(ThreadId 13)] ERROR APP - start debugging failed. user error (ExecResult not found.) : Left "user error (ExecResult not found.)"

@@ -1,0 +1,1 @@
+2021-05-25 20:09:05.973407261000 [6507(ThreadId 13)] ERROR APP - user error (<getModule> loaded module can not find from path. </home/lucas/Documentos/GitProjects/functional-programming/class2/src/Lib.hs> [("Main","/home/lucas/Documentos/GitProjects/functional-programming/class2/test/Spec.hs")])
