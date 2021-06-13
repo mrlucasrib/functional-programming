@@ -4,8 +4,8 @@ module Lib where
 
 someFunc :: IO ()
 someFunc = do
-  print (fib 3)
-  print (fibLinear 4)
+  print (fib 5)
+  print (fibLinear 5)
   print (sumOfSquares 5 4 6)
 
 fib :: Int -> Int
@@ -13,17 +13,10 @@ fib 0 = 0
 fib 1 = 1
 fib n = fib (n -1) + fib (n - 2)
 
-fibLinear :: Int -> Int
+fibLinear :: Float -> Float
 fibLinear 0 = 0
 fibLinear 1 = 1
-fibLinear n
-  | even n = f1 * (f1 + 2 * f2)
-  | n `mod` 4 == 1 = (2 * f1 + f2) * (2 * f1 - f2) + 2
-  | otherwise = (2 * f1 + f2) * (2 * f1 - f2) - 2
-  where
-    k = n `div` 2
-    f1 = fibLinear k
-    f2 = fibLinear (k -1)
+fibLinear n = ((1 + sqrt 5)**n - (1- sqrt 5)**n)/(2**n * sqrt 5)
 
 
 sumOfSquares :: Int -> Int -> Int -> Int

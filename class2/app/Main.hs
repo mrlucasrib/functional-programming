@@ -53,6 +53,3 @@ menorQue2 (_:_) = False
 
 tamanho :: [a] -> Bool
 tamanho (x:xs) = length (x:xs) <= 2
-
-    
-
