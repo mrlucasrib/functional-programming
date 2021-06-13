@@ -816,24 +816,26 @@ Exercício
 uma árvore binária (tipo `IntTree`).
 
 \begin{code}
-%  TODO
-intListToTree :: IntList -> IntTree
-intListToTree INil = ILeaf
-intListToTree (ICons x list)
-    | x >  = INode 
+
+
+listToTree :: IntList -> IntTree
+listToTree INil = ILeaf
+listToTree x = listToTree' x ILeaf
+  where 
+    listToTree' :: IntList -> IntTree -> IntTree
+    listToTree' INil t = t
+    listToTree' (ICons x xs) t = listToTree' xs (insertTree x t)
+
+
+insertTree :: Int -> IntTree -> IntTree
+insertTree x ILeaf = (INode x ILeaf ILeaf)
+insertTree x (INode y left right)
+  | x == y = INode y left right
+  | x < y = INode y (insertTree x left) right
+  | otherwise = INode y left (insertTree x right)
+
 
 \end{code}
-
-% \begin{code}
-% intTreeToList :: IntTree -> IntList
-% intTreeToList ILeaf = INil
-% intTreeToList (INode x l r)
-%   = ICons x (concatIntList l' r')
-%     where
-%       l' = intTreeToList l
-%       r' = intTreeToList r
-% \end{code}
-
 
 
 Exercício
@@ -842,10 +844,15 @@ Exercício
 - Desenvolva uma função que a partir de uma lista de clientes, retorne
 uma lista contendo todos os clientes que desejam receber mensagens de
 ofertas.
-% \begin{code}
-% %  TODO
-% receberOfertas :: [Client] -> [Client]
-% receberOfertas xs = [x | x <- xs, x->SendOffer]
 
-% \end{code}
+\begin{code}
+
+sendOffer :: Client -> Bool
+sendOffer (Customer _ _ v) = v
+
+
+receberOfertas :: [Client] -> [Client]
+receberOfertas xs = [x | x <- xs, sendOffer x]
+
+\end{code}
 
